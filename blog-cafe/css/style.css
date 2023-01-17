@@ -27,9 +27,10 @@ body {
 
 /* GLOBALS */
 .container {
-    max-width: 120rem;
+    /* max-width: 120rem; */
     margin: 0 auto;
-    width: 90%;
+    width: min(90%, 120rem);
+    /* width: 90%; */
 }
 
 a {
@@ -75,8 +76,15 @@ img {
 }
 
 /* HEADER */
-.header {
+.webp .header {
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp .header {
     background-image: url(../img/banner.jpg);
+}
+
+.header {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,6 +101,10 @@ img {
     .header__text {
         margin-top: 12.5rem;
     }
+}
+
+.bar {
+    padding: 4rem;
 }
 
 @media (min-width: 768px) {
@@ -149,6 +161,7 @@ img {
 
 .btn {
     background-color: var(--black);
+    border: none;
     color: var(--white);
     display: block;
     font-family: var(--headingFonts);
@@ -166,6 +179,10 @@ img {
     }
 }
 
+.btn:hover {
+    cursor: pointer;
+}
+
 .btn--primary {
     background-color: var(--black);
 }
@@ -180,22 +197,97 @@ img {
 
 .widget-courses {
     border-bottom: .1rem solid var(--gray);
+    margin-bottom: 2rem;
 }
 
 .widget-courses:last-of-type {
     border: none;
+    margin-bottom: 0;
 }
 
-.widget-courses__label {
+.widget-courses__label,
+.course__label {
     font-family: var(--headingFonts);
     font-weight: 700;
 }
 
-.widget-courses__info {
+.widget-courses__info,
+.course__info {
     font-weight: 400;
 }
 
 .widget-courses__label,
 .widget-courses__info {
     font-size: 2rem;
+}
+
+.footer {
+    background-color: var(--black);
+    margin-top: 4rem;
+    padding-bottom: 1rem;
+}
+
+/* ABOUT US */
+@media (min-width: 768px) {
+    .about-us {
+        column-gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* COURSES */
+.course {
+    border-bottom: .1rem solid var(--gray);
+    padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+    .course {
+        column-gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+.course:last-of-type {
+    border: none;
+}
+
+/* CONTACT */
+.contact-bg {
+    background-image: url(../img/contacto.jpg);
+    background-size: cover;
+    height: 40rem;
+}
+
+/* FORM */
+.form {
+    background-color: var(--white);
+    margin: -5rem auto 0 auto;
+    padding: 5rem;
+    width: 95%;
+}
+
+.field {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.field__label {
+    flex-basis: 9rem;
+    padding-right: 2rem;
+    text-align: right;
+}
+
+.field__input {
+    border: .1rem solid var(--gray);
+    border-radius: 1rem;
+    flex-grow: 1;
+    padding: 1.5rem;
+}
+
+.field__input--textarea {
+    max-height: 30rem;
+    min-height: 20rem;
 }
