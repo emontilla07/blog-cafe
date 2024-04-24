@@ -57,6 +57,11 @@ h4 {
     font-size: 2.8rem;
 }
 
+figure {
+    margin: 0;
+    padding: 0;
+}
+
 img {
     max-width: 100%;
 }
@@ -182,16 +187,16 @@ img {
     margin-bottom: none;
 }
 
-.widget-curso__label {
+:is(.widget-curso__label, .curso__label) {
     font-family: var(--fuenteHeading);
     font-weight: 700;
 }
 
-.widget-curso__info {
+:is(.widget-curso__info, .curso__info) {
     font-weight: 400;
 }
 
-:is(.widget-curso__label, .widget-curso__info) {
+:is(.widget-curso__label, .widget-curso__info, .curso__label, .curso__info) {
     font-size: 2rem;
 }
 
@@ -201,3 +206,55 @@ img {
     margin-top: 5rem;
     padding-bottom: 3rem;
 }
+
+/* Sobre Nosotros */
+@media (width >= 768px) {
+    /* Con Flexbox */
+    /* .sobre-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sobre-nosotros__imagen {
+        flex: 0 0 calc(50% - 1rem);
+    }
+
+    .sobre-nosotros__texto {
+        flex: 0 0 calc(50% - 1rem);
+    } */
+
+    /* Con Grid */
+    .sobre-nosotros {
+        column-gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Cursos */
+.curso {
+    border-bottom: .1rem solid var(--claro);
+    padding: 3rem 0;
+}
+
+@media (width >=1200px) {
+    .curso {
+        column-gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media (768px <= width < 1200px) {
+    .curso {
+        column-gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.curso:last-of-type {
+    border-bottom: none;
+}
+
+
