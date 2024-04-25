@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de blog de café">
     <title>Blog - Café</title>
     <link rel="preload" href="src/css/normalize.css" as="style">
     <link rel="stylesheet" href="src/css/normalize.css">
@@ -40,7 +41,10 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="src/img/blog1.jpg" alt="Imagen de granos de café">
+                    <picture>
+                        <source loading="lazy" srcset="src/img/blog1.webp" type="image/webp">
+                        <img loading="lazy" src="src/img/blog1.jpg" alt="Imagen de granos de café">
+                    </picture>
                 </div>
 
                 <div class="entrada__contenido">
@@ -56,7 +60,10 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="src/img/blog2.jpg" alt="Postres de café">
+                    <picture>
+                        <source loading="lazy" srcset="src/img/blog2.webp" type="image/webp">
+                        <img loading="lazy" src="src/img/blog2.jpg" alt="Imagen de granos de café">
+                    </picture>
                 </div>
 
                 <div class="entrada__contenido">
@@ -72,7 +79,10 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="src/img/blog3.jpg" alt="Taza de café">
+                    <picture>
+                        <source loading="lazy" srcset="src/img/blog3.webp" type="image/webp">
+                        <img loading="lazy" src="src/img/blog3.jpg" alt="Imagen de granos de café">
+                    </picture>
                 </div>
 
                 <div class="entrada__contenido">
@@ -129,5 +139,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="src/js/modernizr.js"></script>
 </body>
 </html>
