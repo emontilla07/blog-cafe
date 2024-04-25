@@ -81,14 +81,18 @@ img {
 
 /* Header */
 .webp .header {
-    background: url(../img/banner.webp) no-repeat center center;    /* bg-color | bg-image | bg-repeat | bg-position */
+    /* background: url(../img/banner.webp) no-repeat center center; */    /* bg-color | bg-image | bg-repeat | bg-position */
+    background-image: url(../img/banner.webp);
 }
 
 .no-webp .header {
-    background: url(../img/banner.jpg) no-repeat center center;    /* bg-color | bg-image | bg-repeat | bg-position */
+    /* background: url(../img/banner.jpg) no-repeat center center; */    /* bg-color | bg-image | bg-repeat | bg-position */
+    background-image: url(../img/banner.jpg);
 }
 
 .header {
+    background-repeat: no-repeat;
+    background-position: center ceter;
     background-size: cover;
     height: 60rem;
 }
